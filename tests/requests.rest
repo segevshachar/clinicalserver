@@ -1,0 +1,50 @@
+
+######
+GET http://localhost:3000/health
+
+#####
+GET http://localhost:3000/files/try2.json
+
+######
+GET http://localhost:3000/files
+
+####
+PUT http://localhost:3000/files/try1.json
+Content-Type: application/json
+
+{
+  "data": "try"
+}
+
+####
+POST http://localhost:3000/files
+Content-Type: application/json
+
+{
+  "id": "try4.json",
+  "data": "try4"
+}
+
+####
+GET http://dev-lb-1490108108.us-east-2.elb.amazonaws.com/files/try2.json
+
+######
+GET http://dev-lb-1490108108.us-east-2.elb.amazonaws.com/files
+
+####
+PUT http://dev-lb-1490108108.us-east-2.elb.amazonaws.com/files/try1.json
+Content-Type: application/json
+
+{
+  "data": "try"
+}
+
+####
+POST dev-lb-1490108108.us-east-2.elb.amazonaws.com/files
+Content-Type: application/json
+
+{
+  "id": "try4.json",
+  "data": "try4"
+}
+
