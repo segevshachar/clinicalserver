@@ -40,7 +40,7 @@ module "ecs" {
   environment      = local.environment_name
   vpc_id           = module.vpc.vpc_id
   sg_id            = module.sg.aws_security_group_id
-  subnets          = module.vpc.private_subnets
+  subnets          = module.vpc.public_subnets
   aws_region       = local.aws_region
   target_group_arn = module.alb.aws_lb_target_group_id
 
